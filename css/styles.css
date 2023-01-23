@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --primary-text-color: #757575;
   --title-color: #212121;
@@ -8,6 +18,7 @@
 }
 
 body {
+  margin: 0;
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
   font-family: 'Roboto', sans-serif;
@@ -16,9 +27,21 @@ body {
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Logo */
+
+/* Page-header */
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid tomato;
+  margin: 0 auto;
+}
 
 .logo {
   color: var(--title-color);
@@ -76,19 +99,22 @@ ul {
 
 .hero {
   background-color: #2f303a;
+  text-align: center;
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   color: var(--button-text-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-.hero-button {
+.hero .button {
+  display: inline-block;
   background-color: var(--accent-color);
   color: var(--button-text-color);
   font-family: inherit;
@@ -97,7 +123,12 @@ ul {
   line-height: 1.87;
   letter-spacing: 0.06em;
   cursor: pointer;
-  }
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 32px;
+  text-align: center;
+  border: 1px solid transparent;
+}
 
 /* Section */
 
@@ -114,7 +145,20 @@ ul {
   margin: -1px;
 }
 
+.section {
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.section.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--secondary-background-color);
+}
+
 .section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
   color: var(--title-color);
   font-weight: 700;
   font-size: 36px;
@@ -122,6 +166,8 @@ ul {
 }
 
 .features .title {
+  margin-top: 0;
+  margin-bottom: 10px;
   color: var(--title-color);
   font-weight: 700;
   font-size: 14px;
@@ -129,14 +175,12 @@ ul {
 }
 
 .features .text {
+  margin: 0 0;
   color: var(--primary-text-color);
   font-size: 14px;
   line-height: 1.71;
 }
 
-.team {
-  background-color: var(--secondary-background-color);
-}
 
 .team-list .title {
   color: var(--title-color);
@@ -154,6 +198,9 @@ ul {
 
 .footer .logo {
   color: var(--button-text-color);
+  display: inline-block;
+  margin-bottom: 20px;
+
 }
 
 .footer {
@@ -214,3 +261,9 @@ ul {
   font-size: 16px;
   line-height: 30px;
 }
+
+.container.footer{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
