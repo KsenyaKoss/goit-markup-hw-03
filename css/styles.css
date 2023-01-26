@@ -226,6 +226,7 @@ p {
 
 .features {
   display: flex;
+  gap: 30px;
 }
 
 .features .items + .item {
